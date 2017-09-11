@@ -1,0 +1,18 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="com.likeits.ttlive.activitys.fragment.MainFragment01">
+
+    <!-- TODO: Update blank fragment layout -->
+    <include layout="@layout/layout_header_with_back" />
+
+    <com.handmark.pulltorefresh.library.PullToRefreshListView
+        android:id="@+id/mian_home_listview"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:dividerHeight="1dp"
+        >
+    </com.handmark.pulltorefresh.library.PullToRefreshListView>
+</LinearLayout>
