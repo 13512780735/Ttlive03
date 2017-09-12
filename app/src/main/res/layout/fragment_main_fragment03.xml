@@ -2,8 +2,228 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@color/background_b"
     android:orientation="vertical"
     tools:context="com.likeits.ttlive.activitys.fragment.MainFragment03">
 
     <include layout="@layout/layout_header_with_back"></include>
+
+    <com.handmark.pulltorefresh.library.PullToRefreshScrollView
+        android:id="@+id/ll_contact_scrollview"
+        android:layout_width="match_parent"
+        android:layout_height="0dip"
+        android:layout_weight="1"
+        android:divider="@color/smssdk_white"
+        android:focusable="true"
+        android:focusableInTouchMode="true">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/white"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/white"
+                android:orientation="horizontal"
+                android:paddingBottom="20dip">
+
+                <LinearLayout
+                    android:layout_width="0dip"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:orientation="vertical"
+                    android:paddingTop="30dip">
+
+                    <RelativeLayout
+                        android:layout_width="70dip"
+                        android:layout_height="70dip"
+                        android:layout_gravity="center_horizontal"
+                        android:background="@mipmap/icon_contacts_secont">
+
+                        <com.likeits.ttlive.activitys.view.CircleImageView
+                            android:layout_width="40dip"
+                            android:layout_height="40dip"
+                            android:layout_centerInParent="true"
+                            android:src="@mipmap/test04" />
+                    </RelativeLayout>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_horizontal"
+                        android:text="第2名"
+                        android:textSize="12sp" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_horizontal"
+                        android:padding="5dip"
+                        android:text="Second"
+                        android:textColor="@color/defualt_textcolor_h"
+                        android:textSize="12sp" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_horizontal"
+                        android:text="游戏"
+                        android:textColor="@color/defualt_textcolor_d"
+                        android:textSize="12sp" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_horizontal"
+                        android:layout_marginTop="10dip"
+                        android:background="@drawable/button_pink_bg"
+                        android:paddingBottom="2dip"
+                        android:paddingLeft="10dip"
+                        android:paddingRight="10dip"
+                        android:paddingTop="2dip"
+                        android:text="+ 关注"
+                        android:textColor="@color/bgcolor"
+                        android:textSize="14sp" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="0dip"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:orientation="vertical"
+                    android:paddingTop="10dip">
+
+                    <RelativeLayout
+                        android:layout_width="90dip"
+                        android:layout_height="90dip"
+                        android:layout_gravity="center_horizontal"
+                        android:background="@mipmap/icon_contacts_first">
+
+                        <com.likeits.ttlive.activitys.view.CircleImageView
+                            android:layout_width="52dip"
+                            android:layout_height="52dip"
+                            android:layout_centerHorizontal="true"
+                            android:layout_marginTop="23dip"
+                            android:src="@mipmap/test01" />
+                    </RelativeLayout>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_horizontal"
+                        android:text="第1名"
+                        android:textSize="12sp" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_horizontal"
+                        android:padding="5dip"
+                        android:text="First"
+                        android:textColor="@color/defualt_textcolor_g"
+                        android:textSize="12sp" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_horizontal"
+                        android:text="游戏"
+                        android:textColor="@color/defualt_textcolor_d"
+                        android:textSize="12sp" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_horizontal"
+                        android:layout_marginTop="10dip"
+                        android:background="@drawable/button_pink_bg"
+                        android:paddingBottom="2dip"
+                        android:paddingLeft="10dip"
+                        android:paddingRight="10dip"
+                        android:paddingTop="2dip"
+                        android:text="+ 关注"
+                        android:textColor="@color/bgcolor"
+                        android:textSize="14sp" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="0dip"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:orientation="vertical"
+                    android:paddingTop="30dip">
+
+                    <RelativeLayout
+                        android:layout_width="70dip"
+                        android:layout_height="70dip"
+                        android:layout_gravity="center_horizontal"
+                        android:background="@mipmap/icon_contacts_third">
+
+                        <com.likeits.ttlive.activitys.view.CircleImageView
+                            android:layout_width="40dip"
+                            android:layout_height="40dip"
+                            android:layout_centerInParent="true"
+                            android:src="@mipmap/test04" />
+                    </RelativeLayout>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_horizontal"
+                        android:text="第3名"
+                        android:textSize="12sp" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_horizontal"
+                        android:padding="5dip"
+                        android:text="Third"
+                        android:textColor="@color/defualt_textcolor_i"
+                        android:textSize="12sp" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_horizontal"
+                        android:text="游戏"
+                        android:textColor="@color/defualt_textcolor_d"
+                        android:textSize="12sp" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_horizontal"
+                        android:layout_marginTop="10dip"
+                        android:background="@drawable/button_pink_bg"
+                        android:paddingBottom="2dip"
+                        android:paddingLeft="10dip"
+                        android:paddingRight="10dip"
+                        android:paddingTop="2dip"
+                        android:text="+ 关注"
+                        android:textColor="@color/bgcolor"
+                        android:textSize="14sp" />
+                </LinearLayout>
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="10dip"
+                android:background="@color/background_b"></View>
+
+            <com.likeits.ttlive.activitys.view.MyListview
+                android:id="@+id/home_contacts_listview"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:dividerHeight="1dip"
+                android:paddingLeft="10dip"
+                android:paddingRight="10dip">
+
+            </com.likeits.ttlive.activitys.view.MyListview>
+        </LinearLayout>
+    </com.handmark.pulltorefresh.library.PullToRefreshScrollView>
+
 </LinearLayout>

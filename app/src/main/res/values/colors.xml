@@ -15,10 +15,10 @@
     <color name="defualt_textcolor_c">#666666</color>    <!--次重要的文字信息-->
     <color name="defualt_textcolor_d">#999999</color>    <!--为选中的和注释的文字颜色-->
     <color name="defualt_textcolor_e">#dbdbdb</color>    <!--分割线、为选中的按钮等-->
-    <color name="defualt_textcolor_f">#b2b2b2</color>    <!--学校item字体颜色-->
-    <color name="defualt_textcolor_g">#fe993b</color>    <!--学校item字体颜色-->
-    <color name="defualt_textcolor_h">#668db9</color>    <!--学校item字体颜色-->
-    <color name="defualt_textcolor_i">#5582b1</color>    <!--学校item字体颜色-->
+    <color name="defualt_textcolor_f">#b2b2b2</color>    <!--tem字体颜色-->
+    <color name="defualt_textcolor_g">#FEA64F</color>    <!--橙色item字体颜色-->
+    <color name="defualt_textcolor_h">#AFD6E7</color>    <!--item字体颜色-->
+    <color name="defualt_textcolor_i">#FDD541</color>    <!--item字体颜色-->
 
     <color name="login_btn_bg_color">#02B7FB</color>
     <color name="line_color">#DBDBDB</color>

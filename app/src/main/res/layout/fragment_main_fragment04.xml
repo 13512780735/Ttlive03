@@ -2,22 +2,135 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@color/background_b"
     android:orientation="vertical"
     tools:context="com.likeits.ttlive.activitys.fragment.MainFragment04">
 
     <include layout="@layout/layout_header_with_back"></include>
 
-    <LinearLayout
+    <com.handmark.pulltorefresh.library.PullToRefreshScrollView
+        android:id="@+id/ll_me_scrollview"
         android:layout_width="match_parent"
-        android:layout_height="80dip"
-        android:orientation="horizontal">
+        android:layout_height="0dip"
+        android:layout_weight="1"
+        android:divider="@color/smssdk_white"
+        android:focusable="true"
+        android:focusableInTouchMode="true">
 
-        <com.likeits.ttlive.activitys.view.CircleImageView
-            android:layout_width="60dip"
-            android:layout_height="60dip"
-            android:layout_gravity="center"
-            android:layout_marginLeft="10dip"
-            android:src="@mipmap/test04" />
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/white"
+            android:orientation="vertical">
 
-    </LinearLayout>
+            <LinearLayout
+                android:id="@+id/me_header_userData"
+                android:layout_width="match_parent"
+                android:layout_height="80dip"
+                android:background="@color/white"
+                android:orientation="horizontal">
+
+                <com.likeits.ttlive.activitys.view.CircleImageView
+                    android:id="@+id/me_header_avatar"
+                    android:layout_width="60dip"
+                    android:layout_height="60dip"
+                    android:layout_gravity="center"
+                    android:layout_marginLeft="10dip"
+                    android:src="@mipmap/test04" />
+
+                <LinearLayout
+                    android:layout_width="0dip"
+                    android:layout_height="match_parent"
+                    android:layout_marginBottom="10dip"
+                    android:layout_marginLeft="10dip"
+                    android:layout_marginTop="10dip"
+                    android:layout_weight="2"
+                    android:orientation="vertical">
+
+                    <RelativeLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="0dip"
+
+                        android:layout_weight="1">
+
+                        <TextView
+                            android:id="@+id/me_header_name"
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:gravity="center_vertical"
+                            android:text="小灰灰"
+                            android:textSize="14sp" />
+
+                        <TextView
+                            android:id="@+id/me_header_number"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerVertical="true"
+                            android:layout_marginLeft="10dip"
+                            android:layout_toRightOf="@+id/me_header_name"
+                            android:background="@drawable/button_orange_bg01"
+                            android:drawableLeft="@mipmap/icon_me_star"
+                            android:drawablePadding="5dip"
+                            android:paddingLeft="5dip"
+                            android:paddingRight="5dip"
+                            android:text="15"
+                            android:textColor="@color/defualt_textcolor_g"
+                            android:textSize="12sp" />
+
+                    </RelativeLayout>
+
+                    <TextView
+                        android:id="@+id/home_listview_content"
+                        android:layout_width="wrap_content"
+                        android:layout_height="0dip"
+                        android:layout_weight="1"
+                        android:drawableLeft="@mipmap/icon_me_boy"
+                        android:drawablePadding="10dip"
+                        android:gravity="center_vertical"
+                        android:text="24岁，中山市"
+                        android:textColor="@color/defualt_textcolor_d"
+                        android:textSize="14sp" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="0dip"
+                    android:layout_height="match_parent"
+                    android:layout_marginRight="10dip"
+                    android:layout_weight="1"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:id="@+id/home_listview_number"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:background="@drawable/button_orange_bg"
+                        android:drawablePadding="10dip"
+                        android:padding="4dip"
+                        android:text="完善度80%"
+                        android:textColor="@color/white" />
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:src="@mipmap/icon_right_grey" />
+                </LinearLayout>
+            </LinearLayout>
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="10dip"
+                android:background="@color/background_b"></View>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dip"
+                android:background="@color/white"
+                android:orientation="vertical">
+                <include layout="@layout/layout_me_griview_items"></include>
+
+            </LinearLayout>
+        </LinearLayout>
+    </com.handmark.pulltorefresh.library.PullToRefreshScrollView>
 </LinearLayout>

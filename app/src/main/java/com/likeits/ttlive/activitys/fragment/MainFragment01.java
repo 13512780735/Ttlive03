@@ -5,19 +5,19 @@ import android.support.v4.app.Fragment;
 import android.util.Log;
 import android.view.View;
 import android.widget.Button;
-import android.widget.ListView;
 import android.widget.RelativeLayout;
+import android.widget.ScrollView;
 import android.widget.SimpleAdapter;
 import android.widget.TextView;
 
 import com.daimajia.slider.library.SliderLayout;
-import com.daimajia.slider.library.SliderTypes.BaseSliderView;
 import com.daimajia.slider.library.SliderTypes.DefaultSliderView;
-import com.daimajia.slider.library.Tricks.ViewPagerEx;
 import com.handmark.pulltorefresh.library.PullToRefreshBase;
-import com.handmark.pulltorefresh.library.PullToRefreshListView;
+import com.handmark.pulltorefresh.library.PullToRefreshScrollView;
 import com.likeits.ttlive.R;
+import com.likeits.ttlive.activitys.utils.ListScrollUtil;
 import com.likeits.ttlive.activitys.utils.ToastUtil;
+import com.likeits.ttlive.activitys.view.MyListview;
 
 import java.util.ArrayList;
 import java.util.HashMap;
@@ -27,13 +27,14 @@ import java.util.Map;
 /**
  * A simple {@link Fragment} subclass.
  */
-public class MainFragment01 extends MyBaseFragment implements View.OnClickListener {
+public class MainFragment01 extends MyBaseFragment implements View.OnClickListener ,
+        PullToRefreshBase.OnRefreshListener2<ScrollView>{
 
 
     private TextView tvHead;
     private Button btBack;
-    private PullToRefreshListView mPullToRefreshListView;
-    ListView mListView;
+    private PullToRefreshScrollView mPullToRefreshScrollView;
+    MyListview mListView;
     private SliderLayout sliderShow;
     private RelativeLayout rlFriends, rlGame;
     private List<Map<String, Object>> dataList;
@@ -66,15 +67,21 @@ public class MainFragment01 extends MyBaseFragment implements View.OnClickListen
         tvHead = findViewById(R.id.tv_header);
         btBack.setVisibility(View.GONE);
         tvHead.setText("首页");
-        mPullToRefreshListView = findViewById(R.id.mian_home_listview);
-        View headerView = View.inflate(getActivity(), R.layout.layout_main_home_header,
-                null);
-        mListView = mPullToRefreshListView.getRefreshableView();
-        mListView.addHeaderView(headerView);
+        mPullToRefreshScrollView = findViewById(R.id.ll_home_scrollview);
+        mPullToRefreshScrollView.setMode(PullToRefreshBase.Mode.BOTH);
+        mPullToRefreshScrollView.setOnRefreshListener(this);
+        mPullToRefreshScrollView.getLoadingLayoutProxy().setLastUpdatedLabel(
+                "上次刷新时间");
+        mPullToRefreshScrollView.getLoadingLayoutProxy()
+                .setPullLabel("下拉刷新");
+//          mPullRefreshScrollView.getLoadingLayoutProxy().setRefreshingLabel(
+//                      "refreshingLabel");
+        mPullToRefreshScrollView.getLoadingLayoutProxy().setReleaseLabel(
+                "松开即可刷新");
+        mListView = findViewById(R.id.main_home_listview);
         sliderShow = findViewById(R.id.slider);
         rlFriends = findViewById(R.id.rl_friends);
         rlGame = findViewById(R.id.rl_game);
-        mPullToRefreshListView.setMode(PullToRefreshBase.Mode.BOTH);
         dataList = new ArrayList<Map<String, Object>>();
         getData();
         String[] from = {"img", "name", "content", "type", "address", "number"};
@@ -82,8 +89,9 @@ public class MainFragment01 extends MyBaseFragment implements View.OnClickListen
                 R.id.home_listview_type, R.id.home_listview_address, R.id.home_listview_number};
         simpleAdapter = new SimpleAdapter(getActivity(), dataList, R.layout.layout_home_listview_items, from, to);
         //配置适配器
-        mPullToRefreshListView.setAdapter(simpleAdapter);
+        mListView.setAdapter(simpleAdapter);
         simpleAdapter.notifyDataSetChanged();
+
     }
 
     private void initListener() {
@@ -124,35 +132,19 @@ public class MainFragment01 extends MyBaseFragment implements View.OnClickListen
             defaultSliderView
                     .image(file_maps.get(name));
             sliderShow.addSlider(defaultSliderView);
-        }
+    }
         //其他设置
         sliderShow.setPresetIndicator(SliderLayout.PresetIndicators.Center_Bottom);//使用默认指示器，在底部显示
         sliderShow.setDuration(5000);//停留时间
-        sliderShow.setPresetTransformer(SliderLayout.Transformer.Accordion);
-        sliderShow.addOnPageChangeListener(new ViewPagerEx.OnPageChangeListener() {
-            @Override
-            public void onPageScrolled(int position, float positionOffset, int positionOffsetPixels) {
+        sliderShow.setPresetTransformer(SliderLayout.Transformer.Default);
 
-            }
-
-            @Override
-            public void onPageSelected(int position) {
-
-            }
-
-            @Override
-            public void onPageScrollStateChanged(int state) {
-
-            }
-        });
-        sliderShow.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                ToastUtil.showS(getActivity(), "1");
-            }
-        });
     }
-
+    @Override
+    public void onDestroy() {
+        super.onDestroy();
+        sliderShow.stopAutoCycle();
+        sliderShow.destroyDrawingCache();
+    }
     @Override
     public void onClick(View view) {
         switch (view.getId()) {
@@ -163,5 +155,17 @@ public class MainFragment01 extends MyBaseFragment implements View.OnClickListen
                 ToastUtil.showS(getActivity(), "点击了");
                 break;
         }
+    }
+
+    @Override
+    public void onPullDownToRefresh(PullToRefreshBase<ScrollView> refreshView) {
+        ListScrollUtil.setListViewHeightBasedOnChildren(mListView);
+        mPullToRefreshScrollView.onRefreshComplete();
+    }
+
+    @Override
+    public void onPullUpToRefresh(PullToRefreshBase<ScrollView> refreshView) {
+        ListScrollUtil.setListViewHeightBasedOnChildren(mListView);
+        mPullToRefreshScrollView.onRefreshComplete();
     }
 }

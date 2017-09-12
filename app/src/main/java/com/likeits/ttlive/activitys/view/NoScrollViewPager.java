@@ -53,4 +53,8 @@ public class NoScrollViewPager extends ViewPager {
 		super.setCurrentItem(item, false);// 表示切换的时候，不需要切换时间。
 	}
 
+	@Override
+	public void setOffscreenPageLimit(int limit) {
+		super.setOffscreenPageLimit(limit);
+	}
 }

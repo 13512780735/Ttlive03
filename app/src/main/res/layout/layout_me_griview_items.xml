@@ -1,0 +1,445 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+    <!--第一层-->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="80dip"
+        android:layout_marginLeft="20dip"
+        android:layout_marginRight="20dip"
+
+        android:orientation="horizontal">
+
+        <RelativeLayout
+            android:id="@+id/me_gridView_rl_room"
+            android:layout_width="0dip"
+            android:layout_height="match_parent"
+            android:layout_weight="1">
+
+            <ImageView
+                android:id="@+id/me_gridView_iv01"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="10dip"
+                android:src="@mipmap/icon_me_room" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/me_gridView_iv01"
+                android:layout_centerHorizontal="true"
+                android:text="房间" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="0.5dip"
+                android:layout_alignParentBottom="true"
+                android:layout_marginLeft="10dip"
+                android:layout_marginRight="20dip"
+                android:background="@color/line_color"></View>
+        </RelativeLayout>
+
+        <View
+            android:layout_width="0.5dip"
+            android:layout_height="match_parent"
+            android:layout_marginBottom="10dip"
+            android:layout_marginTop="10dip"
+            android:background="@color/line_color"></View>
+
+        <RelativeLayout
+            android:id="@+id/me_gridView_rl_pay"
+            android:layout_width="0dip"
+            android:layout_height="match_parent"
+            android:layout_weight="1">
+
+            <ImageView
+                android:id="@+id/me_gridView_iv02"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="10dip"
+                android:src="@mipmap/icon_me_pay" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/me_gridView_iv02"
+                android:layout_centerHorizontal="true"
+                android:text="充值" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="0.5dip"
+                android:layout_alignParentBottom="true"
+                android:layout_marginLeft="20dip"
+                android:layout_marginRight="20dip"
+                android:background="@color/line_color"></View>
+        </RelativeLayout>
+
+        <View
+            android:layout_width="0.5dip"
+            android:layout_height="match_parent"
+            android:layout_marginBottom="10dip"
+            android:layout_marginTop="10dip"
+            android:background="@color/line_color"></View>
+
+        <RelativeLayout
+            android:id="@+id/me_gridView_rl_attention"
+            android:layout_width="0dip"
+            android:layout_height="match_parent"
+            android:layout_gravity="center"
+            android:layout_weight="1">
+
+            <ImageView
+                android:id="@+id/me_gridView_iv03"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="10dip"
+                android:src="@mipmap/icon_me_attention" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_below="@+id/me_gridView_iv03"
+                android:layout_centerHorizontal="true"
+                android:gravity="center_horizontal"
+                android:text="关注" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="0.5dip"
+                android:layout_alignParentBottom="true"
+                android:layout_marginLeft="20dip"
+                android:layout_marginRight="10dip"
+                android:background="@color/line_color"></View>
+        </RelativeLayout>
+    </LinearLayout>
+    <!--第二层-->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="80dip"
+        android:layout_marginLeft="20dip"
+        android:layout_marginRight="20dip"
+
+        android:orientation="horizontal">
+
+        <RelativeLayout
+            android:id="@+id/me_gridView_rl_gift"
+            android:layout_width="0dip"
+            android:layout_height="match_parent"
+            android:layout_weight="1">
+
+            <ImageView
+                android:id="@+id/me_gridView_iv04"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="10dip"
+                android:src="@mipmap/icon_me_gift" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/me_gridView_iv04"
+                android:layout_centerHorizontal="true"
+                android:text="礼品兑换" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="0.5dip"
+                android:layout_alignParentBottom="true"
+                android:layout_marginLeft="10dip"
+                android:layout_marginRight="20dip"
+                android:background="@color/line_color"></View>
+        </RelativeLayout>
+
+        <View
+            android:layout_width="0.5dip"
+            android:layout_height="match_parent"
+            android:layout_marginBottom="10dip"
+            android:layout_marginTop="10dip"
+            android:background="@color/line_color"></View>
+
+        <RelativeLayout
+            android:id="@+id/me_gridView_rl_mount"
+            android:layout_width="0dip"
+            android:layout_height="match_parent"
+            android:layout_weight="1">
+
+            <ImageView
+                android:id="@+id/me_gridView_iv05"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="10dip"
+                android:src="@mipmap/icon_me_mount" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/me_gridView_iv05"
+                android:layout_centerHorizontal="true"
+                android:text="购买坐骑" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="0.5dip"
+                android:layout_alignParentBottom="true"
+                android:layout_marginLeft="20dip"
+                android:layout_marginRight="20dip"
+                android:background="@color/line_color"></View>
+        </RelativeLayout>
+
+        <View
+            android:layout_width="0.5dip"
+            android:layout_height="match_parent"
+            android:layout_marginBottom="10dip"
+            android:layout_marginTop="10dip"
+            android:background="@color/line_color"></View>
+
+        <RelativeLayout
+            android:id="@+id/me_gridView_rl_member"
+            android:layout_width="0dip"
+            android:layout_height="match_parent"
+            android:layout_gravity="center"
+            android:layout_weight="1">
+
+            <ImageView
+                android:id="@+id/me_gridView_iv06"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="10dip"
+                android:src="@mipmap/icon_me_member" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_below="@+id/me_gridView_iv06"
+                android:layout_centerHorizontal="true"
+                android:gravity="center_horizontal"
+                android:text="购买会员" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="0.5dip"
+                android:layout_alignParentBottom="true"
+                android:layout_marginLeft="20dip"
+                android:layout_marginRight="10dip"
+                android:background="@color/line_color"></View>
+        </RelativeLayout>
+    </LinearLayout>
+    <!--第三层-->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="80dip"
+        android:layout_marginLeft="20dip"
+        android:layout_marginRight="20dip"
+
+        android:orientation="horizontal">
+
+        <RelativeLayout
+            android:id="@+id/me_gridView_rl_apply_short"
+            android:layout_width="0dip"
+            android:layout_height="match_parent"
+            android:layout_weight="1">
+
+            <ImageView
+                android:id="@+id/me_gridView_iv07"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="10dip"
+                android:src="@mipmap/icon_me_apply_short" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/me_gridView_iv07"
+                android:layout_centerHorizontal="true"
+                android:text="申请短位" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="0.5dip"
+                android:layout_alignParentBottom="true"
+                android:layout_marginLeft="10dip"
+                android:layout_marginRight="20dip"
+                android:background="@color/line_color"></View>
+        </RelativeLayout>
+
+        <View
+            android:layout_width="0.5dip"
+            android:layout_height="match_parent"
+            android:layout_marginBottom="10dip"
+            android:layout_marginTop="10dip"
+            android:background="@color/line_color"></View>
+
+        <RelativeLayout
+            android:id="@+id/me_gridView_rl_apply_eredar"
+            android:layout_width="0dip"
+            android:layout_height="match_parent"
+            android:layout_weight="1">
+
+            <ImageView
+                android:id="@+id/me_gridView_iv08"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="10dip"
+                android:src="@mipmap/icon_me_apply_eredar" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/me_gridView_iv08"
+                android:layout_centerHorizontal="true"
+                android:text="申请达人" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="0.5dip"
+                android:layout_alignParentBottom="true"
+                android:layout_marginLeft="20dip"
+                android:layout_marginRight="20dip"
+                android:background="@color/line_color"></View>
+        </RelativeLayout>
+
+        <View
+            android:layout_width="0.5dip"
+            android:layout_height="match_parent"
+            android:layout_marginBottom="10dip"
+            android:layout_marginTop="10dip"
+            android:background="@color/line_color"></View>
+
+        <RelativeLayout
+            android:id="@+id/me_gridView_rl_task"
+            android:layout_width="0dip"
+            android:layout_height="match_parent"
+            android:layout_gravity="center"
+            android:layout_weight="1">
+
+            <ImageView
+                android:id="@+id/me_gridView_iv09"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="10dip"
+                android:src="@mipmap/icon_me_task" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_below="@+id/me_gridView_iv09"
+                android:layout_centerHorizontal="true"
+                android:gravity="center_horizontal"
+                android:text="奖励任务" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="0.5dip"
+                android:layout_alignParentBottom="true"
+                android:layout_marginLeft="20dip"
+                android:layout_marginRight="10dip"
+                android:background="@color/line_color"></View>
+        </RelativeLayout>
+    </LinearLayout>
+    <!--第四层-->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="80dip"
+        android:layout_marginLeft="20dip"
+        android:layout_marginRight="20dip"
+
+        android:orientation="horizontal">
+
+        <RelativeLayout
+            android:id="@+id/me_gridView_rl_explain"
+            android:layout_width="0dip"
+            android:layout_height="match_parent"
+            android:layout_weight="1">
+
+            <ImageView
+                android:id="@+id/me_gridView_iv10"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="10dip"
+                android:src="@mipmap/icon_me_explain" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/me_gridView_iv10"
+                android:layout_centerHorizontal="true"
+                android:text="玩法说明" />
+
+        </RelativeLayout>
+
+        <View
+            android:layout_width="0.5dip"
+            android:layout_height="match_parent"
+            android:layout_marginBottom="10dip"
+            android:layout_marginTop="10dip"
+            android:background="@color/line_color"></View>
+
+        <RelativeLayout
+            android:id="@+id/me_gridView_rl_dvise"
+            android:layout_width="0dip"
+            android:layout_height="match_parent"
+            android:layout_weight="1">
+
+            <ImageView
+                android:id="@+id/me_gridView_iv11"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="10dip"
+                android:src="@mipmap/icon_me_dvise" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/me_gridView_iv11"
+                android:layout_centerHorizontal="true"
+                android:text="投诉建议" />
+
+        </RelativeLayout>
+
+        <View
+            android:layout_width="0.5dip"
+            android:layout_height="match_parent"
+            android:layout_marginBottom="10dip"
+            android:layout_marginTop="10dip"
+            android:background="@color/line_color"></View>
+
+        <RelativeLayout
+            android:id="@+id/me_gridView_rl_setting"
+            android:layout_width="0dip"
+            android:layout_height="match_parent"
+            android:layout_gravity="center"
+            android:layout_weight="1">
+
+            <ImageView
+                android:id="@+id/me_gridView_iv12"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="10dip"
+                android:src="@mipmap/icon_me_setting" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_below="@+id/me_gridView_iv12"
+                android:layout_centerHorizontal="true"
+                android:gravity="center_horizontal"
+                android:text="设置" />
+
+        </RelativeLayout>
+    </LinearLayout>
+</LinearLayout>

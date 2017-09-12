@@ -8,11 +8,34 @@
     <!-- TODO: Update blank fragment layout -->
     <include layout="@layout/layout_header_with_back" />
 
-    <com.handmark.pulltorefresh.library.PullToRefreshListView
-        android:id="@+id/mian_home_listview"
+    <com.handmark.pulltorefresh.library.PullToRefreshScrollView
+        android:id="@+id/ll_home_scrollview"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:dividerHeight="1dp"
-        >
-    </com.handmark.pulltorefresh.library.PullToRefreshListView>
+        android:layout_height="0dip"
+        android:layout_weight="1"
+        android:divider="@color/smssdk_white"
+        android:focusable="true"
+        android:focusableInTouchMode="true">
+
+        <LinearLayout
+            android:id="@+id/layout"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:background="#ffffff"
+            android:orientation="vertical">
+
+            <include layout="@layout/layout_main_home_header" />
+
+            <com.likeits.ttlive.activitys.view.MyListview
+                android:id="@+id/main_home_listview"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="10dip"
+                android:layout_marginRight="10dip"
+                android:layout_marginTop="10dip"
+                android:dividerHeight="1dip"
+                android:focusable="false"></com.likeits.ttlive.activitys.view.MyListview>
+        </LinearLayout>
+
+    </com.handmark.pulltorefresh.library.PullToRefreshScrollView>
 </LinearLayout>

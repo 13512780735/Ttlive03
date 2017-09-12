@@ -43,6 +43,7 @@ public class MainActivity extends FragmentActivity implements ViewPager.OnPageCh
         MyActivityManager.getInstance().addActivity(this);
         ButterKnife.bind(this);
         initView();
+        mViewPager.setOffscreenPageLimit(2);
         //注册一个监听连接状态的listener
         //   EMClient.getInstance().addConnectionListener(new MyConnectionListener());
     }

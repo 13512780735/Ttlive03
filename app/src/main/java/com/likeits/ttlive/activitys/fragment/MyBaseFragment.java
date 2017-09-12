@@ -71,9 +71,9 @@ public abstract class MyBaseFragment extends Fragment {
             return;
         }
 
-        if (getUserVisibleHint()) {
+        if (getUserVisibleHint()&&!isLoad) {
             lazyLoad();
-            isLoad = true;
+             isLoad = true;
         } else {
             if (isLoad) {
                 stopLoad();
