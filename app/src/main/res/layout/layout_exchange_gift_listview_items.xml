@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+android:orientation="vertical" android:layout_width="match_parent"
+android:layout_height="match_parent">
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:background="@color/white"
+        android:layout_height="wrap_content">
+        <TextView
+            android:id="@+id/tv_gift_type"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="VIP礼物 x1"
+            android:padding="12dip"
+            android:drawableLeft="@mipmap/icon_me_gift01"
+            android:drawablePadding="10dip"
+            android:gravity="center_vertical"/>
+        <TextView
+            android:id="@+id/tv_ruby_number"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical"
+            android:layout_centerVertical="true"
+            android:layout_alignParentRight="true"
+            android:paddingLeft="15dip"
+            android:paddingRight="15dip"
+            android:paddingTop="8dip"
+            android:paddingBottom="8dip"
+            android:layout_marginRight="10dip"
+            android:background="@drawable/button_orange_bg01"
+            android:textColor="@color/defualt_textcolor_g"
+            android:text="1000 红宝石"/>
+    </RelativeLayout>
+</LinearLayout>

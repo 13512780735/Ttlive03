@@ -1,0 +1,227 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/background_b"
+    android:orientation="vertical"
+    tools:context="com.likeits.ttlive.activitys.ui.me.GiftActivity">
+
+    <include layout="@layout/layout_header_with_back"></include>
+
+    <com.handmark.pulltorefresh.library.PullToRefreshScrollView
+        android:id="@+id/gift_scrollview"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/background_b">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/defualt_textcolor_k"
+                android:padding="5dip"
+                android:text="*收到的礼物将转化为红宝石，礼物越多收益越多！"
+                android:textColor="@color/defualt_textcolor_j" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/defualt_textcolor_l"
+                android:orientation="vertical"
+                android:paddingBottom="20dip">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:id="@+id/gift_tv_ruby"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:padding="10dip"
+                        android:text="累计红宝石收益："
+                        android:textColor="@color/defualt_textcolor_z" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_toRightOf="@+id/gift_tv_ruby"
+                        android:drawableLeft="@mipmap/icon_me_ruby"
+                        android:gravity="center_vertical"
+                        android:text="4,349( 昨天+0 )"
+                        android:textColor="@color/defualt_textcolor_z" />
+                </RelativeLayout>
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_horizontal"
+                    android:text="总收益可兑换(元)"
+                    android:textColor="@color/white"
+                    android:textSize="18sp" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="10dip"
+                    android:gravity="center_horizontal"
+                    android:text="¥ 4.34"
+                    android:textColor="@color/white"
+                    android:textSize="20sp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_horizontal"
+                    android:text="昨天收益"
+                    android:textColor="@color/defualt_textcolor_z" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_horizontal"
+                    android:text="+0.00"
+                    android:textColor="@color/defualt_textcolor_z" />
+            </LinearLayout>
+            <RelativeLayout
+                android:id="@+id/gift_rl_earnings"
+                android:layout_width="match_parent"
+                android:background="@color/white"
+                android:paddingLeft="20dip"
+                android:layout_marginTop="10dip"
+                android:paddingRight="20dip"
+                android:layout_height="wrap_content">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:padding="10dip"
+
+                    android:text="收益记录"
+                    android:gravity="center_vertical"
+                    android:drawablePadding="20dip"
+                    android:drawableLeft="@mipmap/icon_gift_gain_recording"/>
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@mipmap/icon_right_grey"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"/>
+            </RelativeLayout>
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dip"
+                android:background="@color/line_color"></View>
+            <RelativeLayout
+                android:id="@+id/gift_rl_break_even"
+                android:layout_width="match_parent"
+                android:background="@color/white"
+                android:paddingLeft="20dip"
+                android:paddingRight="20dip"
+                android:layout_height="wrap_content">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:padding="10dip"
+
+                    android:text="礼物收支"
+                    android:gravity="center_vertical"
+                    android:drawablePadding="20dip"
+                    android:drawableLeft="@mipmap/icon_gift_break_even"/>
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@mipmap/icon_right_grey"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"/>
+            </RelativeLayout>
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dip"
+                android:background="@color/line_color"></View>
+            <RelativeLayout
+                android:id="@+id/gift_rl_monthly_statement"
+                android:layout_width="match_parent"
+                android:background="@color/white"
+                android:paddingLeft="20dip"
+                android:paddingRight="20dip"
+                android:layout_height="wrap_content">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:padding="10dip"
+
+                    android:text="月结记录"
+                    android:gravity="center_vertical"
+                    android:drawablePadding="20dip"
+                    android:drawableLeft="@mipmap/icon_gift_monthly_statement"/>
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@mipmap/icon_right_grey"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"/>
+            </RelativeLayout>
+            <RelativeLayout
+                android:id="@+id/gift_rl_withdraw"
+                android:layout_width="match_parent"
+                android:background="@color/white"
+                android:paddingLeft="20dip"
+                android:layout_marginTop="10dip"
+                android:paddingRight="20dip"
+                android:layout_height="wrap_content">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:padding="10dip"
+
+                    android:text="提现礼品"
+                    android:gravity="center_vertical"
+                    android:drawablePadding="20dip"
+                    android:drawableLeft="@mipmap/icon_gift_withdraw"/>
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@mipmap/icon_right_grey"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"/>
+            </RelativeLayout>
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dip"
+                android:background="@color/line_color"></View>
+            <RelativeLayout
+                android:id="@+id/gift_rl_exchange_gift"
+                android:layout_width="match_parent"
+                android:background="@color/white"
+                android:paddingLeft="20dip"
+                android:paddingRight="20dip"
+                android:layout_height="wrap_content">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:padding="10dip"
+
+                    android:text="兑换礼物"
+                    android:gravity="center_vertical"
+                    android:drawablePadding="20dip"
+                    android:drawableLeft="@mipmap/icon_gift_exchange_gift"/>
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@mipmap/icon_right_grey"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"/>
+            </RelativeLayout>
+        </LinearLayout>
+    </com.handmark.pulltorefresh.library.PullToRefreshScrollView>
+</LinearLayout>
+
+

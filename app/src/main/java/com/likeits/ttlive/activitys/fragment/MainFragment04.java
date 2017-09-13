@@ -1,30 +1,31 @@
 package com.likeits.ttlive.activitys.fragment;
 
 
-import android.os.Bundle;
 import android.support.v4.app.Fragment;
-import android.util.Log;
-import android.view.LayoutInflater;
 import android.view.View;
-import android.view.ViewGroup;
 import android.widget.Button;
-import android.widget.GridView;
 import android.widget.LinearLayout;
 import android.widget.RelativeLayout;
 import android.widget.ScrollView;
-import android.widget.SimpleAdapter;
 import android.widget.TextView;
 
 import com.handmark.pulltorefresh.library.PullToRefreshBase;
 import com.handmark.pulltorefresh.library.PullToRefreshScrollView;
 import com.likeits.ttlive.R;
-import com.likeits.ttlive.activitys.utils.ToastUtil;
+import com.likeits.ttlive.activitys.ui.me.ApplyErederActivity;
+import com.likeits.ttlive.activitys.ui.me.ApplyShortActivity;
+import com.likeits.ttlive.activitys.ui.me.AttentionActivity;
+import com.likeits.ttlive.activitys.ui.me.DviseActivity;
+import com.likeits.ttlive.activitys.ui.me.ExplainActivity;
+import com.likeits.ttlive.activitys.ui.me.GiftActivity;
+import com.likeits.ttlive.activitys.ui.me.MemberActivity;
+import com.likeits.ttlive.activitys.ui.me.MountActivity;
+import com.likeits.ttlive.activitys.ui.me.PayActivity;
+import com.likeits.ttlive.activitys.ui.me.RoomActivity;
+import com.likeits.ttlive.activitys.ui.me.SettingActivity;
+import com.likeits.ttlive.activitys.ui.me.TaskActivity;
+import com.likeits.ttlive.activitys.ui.me.UserCentreActivity;
 import com.likeits.ttlive.activitys.view.CircleImageView;
-
-import java.util.ArrayList;
-import java.util.HashMap;
-import java.util.List;
-import java.util.Map;
 
 /**
  * A simple {@link Fragment} subclass.
@@ -120,31 +121,43 @@ public class MainFragment04 extends MyBaseFragment implements
     public void onClick(View view) {
         switch (view.getId()) {
             case R.id.me_header_userData:
-                ToastUtil.showS(getActivity(),"点击了");
+                toActivity(UserCentreActivity.class);
                 break;
             case R.id.me_gridView_rl_room:
+                toActivity(RoomActivity.class);
                 break;
             case R.id.me_gridView_rl_pay:
+                toActivity(PayActivity.class);
                 break;
             case R.id.me_gridView_rl_attention:
+                toActivity(AttentionActivity.class);
                 break;
             case R.id.me_gridView_rl_gift:
+                toActivity(GiftActivity.class);
                 break;
             case R.id.me_gridView_rl_mount:
+                toActivity(MountActivity.class);
                 break;
             case R.id.me_gridView_rl_member:
+                toActivity(MemberActivity.class);
                 break;
             case R.id.me_gridView_rl_apply_short:
+                toActivity(ApplyShortActivity.class);
                 break;
             case R.id.me_gridView_rl_apply_eredar:
+                toActivity(ApplyErederActivity.class);
                 break;
             case R.id.me_gridView_rl_task:
+                toActivity(TaskActivity.class);
                 break;
             case R.id.me_gridView_rl_explain:
+                toActivity(ExplainActivity.class);
                 break;
             case R.id.me_gridView_rl_dvise:
+                toActivity(DviseActivity.class);
                 break;
             case R.id.me_gridView_rl_setting:
+                toActivity(SettingActivity.class);
                 break;
 
 

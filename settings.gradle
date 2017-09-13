@@ -1,1 +1,1 @@
-include ':app', ':easeui', ':pulltorefreshlibrary'
+include ':app', ':easeui', ':pulltorefreshlibrary', ':kkeventbus_module', ':baseapp_module'

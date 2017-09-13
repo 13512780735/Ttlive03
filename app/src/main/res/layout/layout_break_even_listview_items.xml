@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="50dip">
+
+    <TextView
+        android:id="@+id/earnings_listview_tvName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:padding="10dip"
+        android:layout_centerVertical="true"
+        android:text="小丸子mm" />
+    <TextView
+        android:id="@+id/earnings_listview_tvNumber"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:padding="10dip"
+        android:drawableRight="@mipmap/icon_gift"
+        android:drawablePadding="10dip"
+        android:gravity="center_vertical"
+        android:layout_alignParentRight="true"
+        android:text="VIP礼物 x1" />
+</RelativeLayout>

@@ -1,6 +1,6 @@
 [
     {
-        "outputFile": "D:\\as\\Ttlive\\easeui\\build\\intermediates\\incremental\\mergeDebugResources\\merged.dir\\values-large-v4\\values-large-v4.xml",
+        "outputFile": "D:\\as\\Ttlive\\Ttlive\\easeui\\build\\intermediates\\incremental\\mergeDebugResources\\merged.dir\\values-large-v4\\values-large-v4.xml",
         "map": [
             {
                 "to": {
@@ -144,13 +144,13 @@
                     "endOffset": 580
                 },
                 "from": {
-                    "file": "D:\\as\\Ttlive\\easeui\\src\\main\\res\\values-large\\ease_dimens.xml",
+                    "file": "D:\\as\\Ttlive\\Ttlive\\easeui\\src\\main\\res\\values-large\\ease_dimens.xml",
                     "position": {
                         "startLine": 19,
                         "startColumn": 4,
-                        "startOffset": 663,
+                        "startOffset": 682,
                         "endColumn": 52,
-                        "endOffset": 711
+                        "endOffset": 730
                     }
                 }
             },
@@ -163,13 +163,13 @@
                     "endOffset": 634
                 },
                 "from": {
-                    "file": "D:\\as\\Ttlive\\easeui\\src\\main\\res\\values-large\\ease_dimens.xml",
+                    "file": "D:\\as\\Ttlive\\Ttlive\\easeui\\src\\main\\res\\values-large\\ease_dimens.xml",
                     "position": {
                         "startLine": 20,
                         "startColumn": 4,
-                        "startOffset": 716,
+                        "startOffset": 736,
                         "endColumn": 53,
-                        "endOffset": 765
+                        "endOffset": 785
                     }
                 }
             },

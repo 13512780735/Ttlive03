@@ -27,8 +27,8 @@ import java.util.Map;
 /**
  * A simple {@link Fragment} subclass.
  */
-public class MainFragment01 extends MyBaseFragment implements View.OnClickListener ,
-        PullToRefreshBase.OnRefreshListener2<ScrollView>{
+public class MainFragment01 extends MyBaseFragment implements View.OnClickListener,
+        PullToRefreshBase.OnRefreshListener2<ScrollView> {
 
 
     private TextView tvHead;
@@ -116,10 +116,8 @@ public class MainFragment01 extends MyBaseFragment implements View.OnClickListen
 
     private void imageSlider() {
         HashMap<String, Integer> file_maps = new HashMap<String, Integer>();
-        file_maps.put("", R.drawable.bj);
-        file_maps.put("", R.drawable.bj);
-        file_maps.put("", R.drawable.bj);
-        file_maps.put("", R.drawable.bj);
+        file_maps.put("", R.mipmap.home_ad_bg);
+        file_maps.put("", R.mipmap.home_ad_bg);
 //        for (int i = 0; i < file_maps.size(); i++) {
 //            DefaultSliderView defaultSliderView = new DefaultSliderView(getActivity());
 //            // textSliderView.description("");//设置标题
@@ -132,27 +130,41 @@ public class MainFragment01 extends MyBaseFragment implements View.OnClickListen
             defaultSliderView
                     .image(file_maps.get(name));
             sliderShow.addSlider(defaultSliderView);
-    }
+        }
         //其他设置
         sliderShow.setPresetIndicator(SliderLayout.PresetIndicators.Center_Bottom);//使用默认指示器，在底部显示
         sliderShow.setDuration(5000);//停留时间
         sliderShow.setPresetTransformer(SliderLayout.Transformer.Default);
 
     }
+
     @Override
     public void onDestroy() {
         super.onDestroy();
         sliderShow.stopAutoCycle();
         sliderShow.destroyDrawingCache();
     }
+
+    public void showIndentDialog1() {
+        MakeFriendsFragment dialog = new MakeFriendsFragment();
+        dialog.show(getActivity().getSupportFragmentManager(), "MakeFriendsFragment");
+    }
+
+    public void showIndentDialog2() {
+        PlayFragment dialog = new PlayFragment();
+        dialog.show(getActivity().getSupportFragmentManager(), "PlayFragment");
+    }
+
     @Override
     public void onClick(View view) {
         switch (view.getId()) {
             case R.id.rl_friends:
-                ToastUtil.showS(getActivity(), "点击了");
+                showIndentDialog1();
+                //  ToastUtil.showS(getActivity(), "点击了");
                 break;
             case R.id.rl_game:
-                ToastUtil.showS(getActivity(), "点击了");
+                showIndentDialog2();
+                //ToastUtil.showS(getActivity(), "点击了");
                 break;
         }
     }
