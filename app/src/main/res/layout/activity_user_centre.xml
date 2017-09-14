@@ -364,14 +364,20 @@
                         android:padding="10dip"
                         android:text="个人动态"
                         android:textColor="@color/defualt_textcolor_d"/>
-                  <com.likeits.ttlive.activitys.view.MyGridView
-                      android:id="@+id/trends_gridview"
-                      android:layout_width="wrap_content"
-                      android:layout_height="wrap_content"
-                      android:numColumns="5"
-                      android:horizontalSpacing="5dip"
-                      ></com.likeits.ttlive.activitys.view.MyGridView>
+
+                    <com.likeits.ttlive.activitys.view.MyGridView
+                        android:id="@+id/trends_gridview"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:numColumns="5"
+                        android:layout_marginRight="5dip"
+                        android:layout_toRightOf="@+id/tv_trends01"
+                        android:layout_toLeftOf="@+id/tv_trends02"
+                        android:horizontalSpacing="5dip"
+                        android:paddingBottom="5dip"
+                        android:paddingTop="5dip" />
                     <ImageView
+                        android:id="@+id/tv_trends02"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_centerVertical="true"
