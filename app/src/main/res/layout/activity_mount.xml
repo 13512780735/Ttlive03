@@ -3,11 +3,134 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@color/background_b"
     android:orientation="vertical"
     tools:context="com.likeits.ttlive.activitys.ui.me.MountActivity">
 
     <include layout="@layout/layout_header_with_back"></include>
 
+    <com.handmark.pulltorefresh.library.PullToRefreshScrollView
+        android:id="@+id/mount_scrollView"
+        android:layout_width="match_parent"
+        android:layout_height="0dip"
+        android:layout_weight="1"
+        android:background="@color/background_b">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/white"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_horizontal"
+                    android:padding="10dip"
+                    android:text="坐骑是用户活跃度、魅力和消费能力的综合体现"
+                    android:textColor="@color/defualt_textcolor_d"
+                    android:textSize="12sp" />
+
+                <com.likeits.ttlive.activitys.view.MyGridView
+                    android:id="@+id/mount_gridView"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:horizontalSpacing="20dip"
+                    android:verticalSpacing="20dip"
+                    android:paddingLeft="20dip"
+                    android:paddingRight="20dip"
+                    android:numColumns="4"></com.likeits.ttlive.activitys.view.MyGridView>
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:drawablePadding="10dip"
+                    android:drawableRight="@mipmap/icon_right_grey"
+                    android:gravity="right"
+                    android:padding="10dip"
+                    android:text="特权详情"
+                    android:textColor="@color/defualt_textcolor_d" />
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/white"
+                android:layout_marginTop="20dip"
+                android:orientation="vertical">
+                <TextView
+                    android:layout_width="match_parent"
+                    android:padding="10dip"
+                    android:text="购买时长"
+                    android:drawableLeft="@mipmap/icon_tag"
+                    android:drawablePadding="10dip"
+                    android:gravity="center_vertical"
+                    android:background="@color/white"
+                    android:layout_height="wrap_content" />
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dip"
+                    android:background="@color/line_color"></View>
+                <com.likeits.ttlive.activitys.view.MyGridView
+                    android:id="@+id/mount_gridView02"
+                    android:layout_width="match_parent"
+                    android:horizontalSpacing="20dip"
+                    android:verticalSpacing="20dip"
+                    android:padding="20dip"
+                    android:layout_height="wrap_content"
+                    android:numColumns="2"></com.likeits.ttlive.activitys.view.MyGridView>
+            </LinearLayout>
+        </LinearLayout>
+    </com.handmark.pulltorefresh.library.PullToRefreshScrollView>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:background="@color/white"
+        android:layout_height="50dip">
+        <TextView
+            android:id="@+id/tv_balance01"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="10dip"
+            android:layout_centerVertical="true"
+            android:textColor="@color/defualt_textcolor_d"
+            android:text="余额："/>
+        <TextView
+            android:id="@+id/tv_balance"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="10dip"
+            android:layout_toRightOf="@+id/tv_balance01"
+            android:layout_centerVertical="true"
+            android:text="0"/>
+        <TextView
+            android:id="@+id/tv_pay"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="10dip"
+            android:layout_toRightOf="@+id/tv_balance"
+            android:layout_centerVertical="true"
+            android:textColor="@color/defualt_textcolor_j"
+            android:text="充值"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_centerVertical="true"
+            android:text="立即购买"
+            android:textColor="@color/white"
+            android:layout_alignParentRight="true"
+            android:background="@drawable/shape_round_login_btn_"
+            android:paddingRight="20dip"
+            android:paddingLeft="20dip"
+            android:paddingBottom="5dip"
+            android:paddingTop="5dip"
+            android:layout_marginRight="10dip"
+            android:layout_height="wrap_content" />
+    </RelativeLayout>
 </LinearLayout>
 
 
