@@ -23,6 +23,8 @@
     <color name="defualt_textcolor_j">#FF9055</color>    <!--item字体颜色-->
     <color name="defualt_textcolor_l">#26395A</color>    <!--item字体颜色-->
     <color name="defualt_textcolor_z">#B4C0D7</color>    <!--item字体颜色-->
+    <color name="defualt_textcolor_x">#39393B</color>    <!--item字体颜色-->
+    <color name="defualt_textcolor_v">#DFD6D9</color>    <!--item字体颜色-->
 
     <color name="login_btn_bg_color">#02B7FB</color>
     <color name="line_color">#DBDBDB</color>
