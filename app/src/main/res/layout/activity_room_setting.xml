@@ -91,6 +91,7 @@
                     android:textColor="@color/defualt_textcolor_c" />
 
                 <EditText
+                    android:id="@+id/et_room_introduce"
                     android:layout_width="0dip"
                     android:layout_height="match_parent"
                     android:layout_weight="1"
@@ -137,6 +138,7 @@
                     android:textColor="@color/defualt_textcolor_c" />
 
                 <EditText
+                    android:id="@+id/ed_room_notice"
                     android:layout_width="match_parent"
                     android:layout_height="0dip"
                     android:layout_marginLeft="10dip"

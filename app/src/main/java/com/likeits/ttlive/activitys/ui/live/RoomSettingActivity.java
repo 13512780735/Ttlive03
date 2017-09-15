@@ -26,8 +26,16 @@ public class RoomSettingActivity extends Container implements
     TextView tvRight;
     @BindView(R.id.ed_room_name)
     EditText edRoomName;
+    @BindView(R.id.et_room_introduce)
+    EditText edRoomIntroduce;
+    @BindView(R.id.ed_room_notice)
+    EditText edRoomNotice;
     @BindView(R.id.tv_room_length)
     TextView tvRoomLength;
+    @BindView(R.id.tv_room01_length)
+    TextView tvRoomIntroduceLength;
+    @BindView(R.id.tv_room02_length)
+    TextView tvRoomNoticeLength;
     @BindView(R.id.room_setting_scrollView)
     PullToRefreshScrollView mPullToRefreshScrollView;
 
