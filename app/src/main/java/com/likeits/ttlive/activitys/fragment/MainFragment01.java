@@ -4,6 +4,7 @@ package com.likeits.ttlive.activitys.fragment;
 import android.support.v4.app.Fragment;
 import android.util.Log;
 import android.view.View;
+import android.widget.AdapterView;
 import android.widget.Button;
 import android.widget.RelativeLayout;
 import android.widget.ScrollView;
@@ -15,6 +16,7 @@ import com.daimajia.slider.library.SliderTypes.DefaultSliderView;
 import com.handmark.pulltorefresh.library.PullToRefreshBase;
 import com.handmark.pulltorefresh.library.PullToRefreshScrollView;
 import com.likeits.ttlive.R;
+import com.likeits.ttlive.activitys.ui.live.UserLiveActivity;
 import com.likeits.ttlive.activitys.utils.ListScrollUtil;
 import com.likeits.ttlive.activitys.utils.ToastUtil;
 import com.likeits.ttlive.activitys.view.MyListview;
@@ -91,6 +93,12 @@ public class MainFragment01 extends MyBaseFragment implements View.OnClickListen
         //配置适配器
         mListView.setAdapter(simpleAdapter);
         simpleAdapter.notifyDataSetChanged();
+        mListView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+            @Override
+            public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
+                toActivity(UserLiveActivity.class);
+            }
+        });
 
     }
 

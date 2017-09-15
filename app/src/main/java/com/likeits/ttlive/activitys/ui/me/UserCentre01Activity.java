@@ -1,18 +1,12 @@
 package com.likeits.ttlive.activitys.ui.me;
 
-import android.Manifest;
-import android.content.Intent;
-import android.content.pm.PackageManager;
-import android.support.v4.app.ActivityCompat;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
-import android.text.TextUtils;
 import android.util.Log;
 import android.view.View;
 import android.widget.ScrollView;
 import android.widget.SimpleAdapter;
 import android.widget.TextView;
-import android.widget.Toast;
 
 import com.handmark.pulltorefresh.library.PullToRefreshBase;
 import com.handmark.pulltorefresh.library.PullToRefreshScrollView;
@@ -22,7 +16,6 @@ import com.likeits.ttlive.activitys.custom.CommandPhotoUtil;
 import com.likeits.ttlive.activitys.custom.CustomScrollGridView;
 import com.likeits.ttlive.activitys.custom.GridAdapter;
 import com.likeits.ttlive.activitys.custom.PhotoSystemOrShoot;
-import com.likeits.ttlive.activitys.utils.ToastUtil;
 import com.likeits.ttlive.activitys.view.MyGridView;
 
 import java.util.ArrayList;
@@ -33,13 +26,8 @@ import java.util.Map;
 import butterknife.BindView;
 import butterknife.ButterKnife;
 import butterknife.OnClick;
-import me.weyye.hipermission.HiPermission;
-import me.weyye.hipermission.PermissionCallback;
-import me.weyye.hipermission.PermissionItem;
 
-import static com.nostra13.universalimageloader.core.ImageLoader.TAG;
-
-public class UserCentreActivity extends Container implements
+public class UserCentre01Activity extends Container implements
         PullToRefreshBase.OnRefreshListener2<ScrollView> {
     @BindView(R.id.tv_header)
     TextView tvHeader;
@@ -48,12 +36,15 @@ public class UserCentreActivity extends Container implements
     @BindView(R.id.user_centre_scrollView)
     PullToRefreshScrollView mPullToRefreshScrollView;
     //图片添加
-    @BindView(R.id.gv_all_photo)
-    CustomScrollGridView mGridView;
+    //照片墙
+    @BindView(R.id.photo_gridview)
+    MyGridView mGridView;
+    //礼品
     @BindView(R.id.user_centre_gift_gridview)
-    MyGridView mGridView02;
-    @BindView(R.id.trends_gridview)
     MyGridView mGridView03;
+    //个人动态
+    @BindView(R.id.trends_gridview)
+    MyGridView mGridView02;
     /**
      * GridView适配器
      */
@@ -79,25 +70,27 @@ public class UserCentreActivity extends Container implements
     private int[] icon = {R.mipmap.icon_me_gift, R.mipmap.icon_me_gift,
             R.mipmap.icon_me_gift, R.mipmap.icon_me_gift, R.mipmap.icon_me_gift};
     private String[] iconName = {"VIP坐骑", "VIP坐骑", "VIP坐骑", "VIP坐骑", "VIP坐骑"};
-    private List<Map<String, Object>> dataList;
-    private SimpleAdapter simpleAdapter;
+    private List<Map<String, Object>> dataList03;
+    private SimpleAdapter simpleAdapter03;
     // 个人动态
     private int[] icon01 = {R.drawable.test05, R.drawable.test05,
             R.drawable.test05,R.drawable.test05,R.drawable.test05};
     private List<Map<String, Object>> dataList02;
     private SimpleAdapter simpleAdapter02;
+    //照片墻
+    private int[] icon03 = {R.drawable.test05, R.drawable.test05,
+            R.drawable.test05,R.drawable.test05};
+    private List<Map<String, Object>> dataList;
+    private SimpleAdapter simpleAdapter;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_user_centre);
+        setContentView(R.layout.activity_user_centre01);
         ButterKnife.bind(this);
         initView();
-        addPlus();
     }
-
     private void initView() {
-        tvRight.setText("编辑");
         tvHeader.setText("小灰灰");
         mPullToRefreshScrollView.setMode(PullToRefreshBase.Mode.BOTH);
         mPullToRefreshScrollView.setOnRefreshListener(this);
@@ -109,23 +102,50 @@ public class UserCentreActivity extends Container implements
 //                      "refreshingLabel");
         mPullToRefreshScrollView.getLoadingLayoutProxy().setReleaseLabel(
                 "松开即可刷新");
-        dataList = new ArrayList<Map<String, Object>>();
-        getData();
+        /**
+         * 礼品
+         */
+        dataList03 = new ArrayList<Map<String, Object>>();
+        getData03();
         String[] from = {"img", "name"};
         int[] to = {R.id.user_centre_gift_gridview_ivAvatar, R.id.user_centre_gift_gridview_tvName};
-        simpleAdapter = new SimpleAdapter(mContext, dataList, R.layout.layout_user_centre_gift_gridview, from, to);
+        simpleAdapter03 = new SimpleAdapter(mContext, dataList03, R.layout.layout_user_centre_gift_gridview, from, to);
         //配置适配器
-        mGridView02.setAdapter(simpleAdapter);
-        simpleAdapter.notifyDataSetChanged();
+        mGridView03.setAdapter(simpleAdapter03);
+        simpleAdapter03.notifyDataSetChanged();
+        /**
+         * 个人动态
+         */
         dataList02 = new ArrayList<Map<String, Object>>();
         getData02();
-        String[] from02 = {"img", "name"};
+        String[] from02 = {"img"};
         int[] to02 = {R.id.trends_gridview_avatar};
         simpleAdapter02 = new SimpleAdapter(mContext, dataList02, R.layout.layout_trends_gridview_items, from02, to02);
         //配置适配器
-        mGridView03.setAdapter(simpleAdapter02);
+        mGridView02.setAdapter(simpleAdapter02);
         simpleAdapter02.notifyDataSetChanged();
+        /**
+         * 照片墙
+         */
+        dataList = new ArrayList<Map<String, Object>>();
+        getData();
+        String[] from03 = {"img"};
+        int[] to03 = {R.id.iv_photo};
+        simpleAdapter = new SimpleAdapter(mContext, dataList, R.layout.layout_user_centre_photo_gridview_items, from03, to03);
+        //配置适配器
+        mGridView.setAdapter(simpleAdapter);
+        simpleAdapter.notifyDataSetChanged();
     }
+    private List<Map<String, Object>> getData() {
+        for (int i = 0; i < icon03.length; i++) {
+            Log.d("TAG", "" + icon03.length);
+            Map<String, Object> map = new HashMap<String, Object>();
+            map.put("img", icon03[i]);
+            dataList.add(map);
+        }
+        return dataList;
+    }
+
     private List<Map<String, Object>> getData02() {
         for (int i = 0; i < icon01.length; i++) {
             Log.d("TAG", "" + icon01.length);
@@ -135,44 +155,28 @@ public class UserCentreActivity extends Container implements
         }
         return dataList02;
     }
-    private List<Map<String, Object>> getData() {
+    private List<Map<String, Object>> getData03() {
         for (int i = 0; i < icon.length; i++) {
             Log.d("TAG", "" + icon.length);
             Map<String, Object> map = new HashMap<String, Object>();
             map.put("img", icon[i]);
             map.put("name", iconName[i]);
-            dataList.add(map);
+            dataList03.add(map);
         }
-        return dataList;
+        return dataList03;
     }
-    /**
-     * 实例化组件
-     */
-    private void addPlus() {
-        gridAdapter = new GridAdapter(mContext, 5);
-        mGridView.setAdapter(gridAdapter);
 
-        // 选择图片获取途径
-        selectPhoto = new PhotoSystemOrShoot(mContext) {
-            @Override
-            public void onStartActivityForResult(Intent intent, int requestCode) {
-                startActivityForResult(intent, requestCode);
-            }
-        };
-        commandPhoto = new CommandPhotoUtil(mContext, mGridView, gridAdapter, selectPhoto);
-    }
-    @Override
-    protected void onActivityResult(int requestCode, int resultCode, Intent data) {
-        super.onActivityResult(requestCode, resultCode, data);
 
-        // 获取照片返回
-        if (selectPhoto != null) {
-            String photoPath = selectPhoto.getPhotoResultPath(requestCode, resultCode, data);
-            if (!TextUtils.isEmpty(photoPath)) {
-                commandPhoto.showGridPhoto(photoPath);
-            }
+    @OnClick({R.id.backBtn})
+    public void Onclick(View v) {
+        switch (v.getId()){
+            case R.id.backBtn:
+                onBackPressed();
+                break;
         }
+
     }
+
     @Override
     public void onPullDownToRefresh(PullToRefreshBase<ScrollView> refreshView) {
         mPullToRefreshScrollView.onRefreshComplete();
@@ -182,18 +186,4 @@ public class UserCentreActivity extends Container implements
     public void onPullUpToRefresh(PullToRefreshBase<ScrollView> refreshView) {
         mPullToRefreshScrollView.onRefreshComplete();
     }
-
-    @OnClick({R.id.backBtn,R.id.tv_right})
-    public void Onclick(View v) {
-        switch (v.getId()){
-            case R.id.backBtn:
-                onBackPressed();
-                break;
-            case R.id.tv_right:
-                toActivity(UserEditActivity.class);
-                break;
-        }
-
-    }
-
 }

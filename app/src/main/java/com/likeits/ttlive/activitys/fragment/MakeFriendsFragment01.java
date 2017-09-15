@@ -7,12 +7,14 @@ import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.AdapterView;
 import android.widget.ScrollView;
 import android.widget.SimpleAdapter;
 
 import com.handmark.pulltorefresh.library.PullToRefreshBase;
 import com.handmark.pulltorefresh.library.PullToRefreshScrollView;
 import com.likeits.ttlive.R;
+import com.likeits.ttlive.activitys.ui.live.UserLiveActivity;
 import com.likeits.ttlive.activitys.utils.ListScrollUtil;
 import com.likeits.ttlive.activitys.view.MyListview;
 
@@ -72,6 +74,12 @@ public class MakeFriendsFragment01 extends BaseFragment implements
         //配置适配器
         mListView.setAdapter(simpleAdapter);
         simpleAdapter.notifyDataSetChanged();
+        mListView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+            @Override
+            public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
+                toActivity(UserLiveActivity.class);
+            }
+        });
     }
 
     private List<Map<String, Object>> getData() {

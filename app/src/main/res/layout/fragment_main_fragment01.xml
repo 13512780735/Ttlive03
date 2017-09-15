@@ -30,8 +30,6 @@
                 android:id="@+id/main_home_listview"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:layout_marginLeft="10dip"
-                android:layout_marginRight="10dip"
                 android:layout_marginTop="10dip"
                 android:dividerHeight="1dip"
                 android:focusable="false"></com.likeits.ttlive.activitys.view.MyListview>

@@ -1,4 +1,4 @@
-package com.likeits.ttlive.activitys.ui.me;
+package com.likeits.ttlive.activitys.ui.live;
 
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
@@ -10,31 +10,31 @@ import com.handmark.pulltorefresh.library.PullToRefreshBase;
 import com.handmark.pulltorefresh.library.PullToRefreshScrollView;
 import com.likeits.ttlive.R;
 import com.likeits.ttlive.activitys.base.Container;
-import com.likeits.ttlive.activitys.login.LoginActivity;
-import com.likeits.ttlive.activitys.utils.MyActivityManager;
 
 import butterknife.BindView;
 import butterknife.ButterKnife;
 import butterknife.OnClick;
 
-public class SettingActivity extends Container implements
-        PullToRefreshBase.OnRefreshListener2<ScrollView>{
+public class RoomDetailsActivity extends Container implements
+        PullToRefreshBase.OnRefreshListener2<ScrollView> {
     @BindView(R.id.tv_header)
     TextView tvHeader;
-    @BindView(R.id.tv_logout)
-    TextView tvLogout;
-    @BindView(R.id.setting_scrollView)
+    @BindView(R.id.tv_right)
+    TextView tvRight;
+    @BindView(R.id.room_details_scrollView)
     PullToRefreshScrollView mPullToRefreshScrollView;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_setting);
+        setContentView(R.layout.activity_room_details);
         ButterKnife.bind(this);
         initView();
     }
 
     private void initView() {
-        tvHeader.setText("设置");
+        tvHeader.setText("小灰灰的直播间");
+        tvRight.setText("设置");
         mPullToRefreshScrollView.setMode(PullToRefreshBase.Mode.BOTH);
         mPullToRefreshScrollView.setOnRefreshListener(this);
         mPullToRefreshScrollView.getLoadingLayoutProxy().setLastUpdatedLabel(
@@ -47,22 +47,17 @@ public class SettingActivity extends Container implements
                 "松开即可刷新");
     }
 
-    @OnClick({R.id.backBtn,R.id.tv_logout})
+    @OnClick({R.id.backBtn, R.id.tv_right})
     public void Onclick(View v) {
-        switch (v.getId()){
+        switch (v.getId()) {
             case R.id.backBtn:
                 onBackPressed();
                 break;
-            case R.id.tv_logout:
-                logout();
+            case R.id.tv_right:
+                toActivity(RoomSettingActivity.class);
                 break;
         }
 
-    }
-
-    private void logout() {
-        toActivityFinish(LoginActivity.class);
-        MyActivityManager.getInstance().finishAllActivity();
     }
 
     @Override

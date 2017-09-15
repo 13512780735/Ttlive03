@@ -7,7 +7,9 @@ import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.AdapterView;
 import android.widget.Button;
+import android.widget.LinearLayout;
 import android.widget.ScrollView;
 import android.widget.SimpleAdapter;
 import android.widget.TextView;
@@ -15,6 +17,7 @@ import android.widget.TextView;
 import com.handmark.pulltorefresh.library.PullToRefreshBase;
 import com.handmark.pulltorefresh.library.PullToRefreshScrollView;
 import com.likeits.ttlive.R;
+import com.likeits.ttlive.activitys.ui.me.UserCentre01Activity;
 import com.likeits.ttlive.activitys.utils.ListScrollUtil;
 import com.likeits.ttlive.activitys.view.MyListview;
 
@@ -27,7 +30,7 @@ import java.util.Map;
  * A simple {@link Fragment} subclass.
  */
 public class MainFragment03 extends MyBaseFragment implements
-        PullToRefreshBase.OnRefreshListener2<ScrollView> {
+        PullToRefreshBase.OnRefreshListener2<ScrollView>, View.OnClickListener {
 
 
     private TextView tvHeader;
@@ -43,6 +46,7 @@ public class MainFragment03 extends MyBaseFragment implements
     private List<Map<String, Object>> dataList;
     private SimpleAdapter simpleAdapter;
     private PullToRefreshScrollView mPullToRefreshScrollView;
+    private LinearLayout llFirst, llSecond, llThird;
 
     @Override
     protected int setContentView() {
@@ -60,6 +64,9 @@ public class MainFragment03 extends MyBaseFragment implements
         btBack = findViewById(R.id.backBtn);
         btBack.setVisibility(View.GONE);
         tvHeader = findViewById(R.id.tv_header);
+        llFirst = findViewById(R.id.ll_first);
+        llSecond = findViewById(R.id.ll_second);
+        llThird = findViewById(R.id.ll_third);
         tvHeader.setText("达人榜");
         mPullToRefreshScrollView = findViewById(R.id.ll_contact_scrollview);
         mPullToRefreshScrollView.setMode(PullToRefreshBase.Mode.BOTH);
@@ -82,6 +89,12 @@ public class MainFragment03 extends MyBaseFragment implements
         //配置适配器
         mListView.setAdapter(simpleAdapter);
         simpleAdapter.notifyDataSetChanged();
+        mListView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+            @Override
+            public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
+                toActivity(UserCentre01Activity.class);
+            }
+        });
     }
 
     private List<Map<String, Object>> getData() {
@@ -99,6 +112,9 @@ public class MainFragment03 extends MyBaseFragment implements
     }
 
     private void initListener() {
+        llFirst.setOnClickListener(this);
+        llSecond.setOnClickListener(this);
+        llThird.setOnClickListener(this);
     }
 
     @Override
@@ -111,5 +127,16 @@ public class MainFragment03 extends MyBaseFragment implements
     public void onPullUpToRefresh(PullToRefreshBase<ScrollView> refreshView) {
         ListScrollUtil.setListViewHeightBasedOnChildren(mListView);
         mPullToRefreshScrollView.onRefreshComplete();
+    }
+
+    @Override
+    public void onClick(View v) {
+        switch (v.getId()){
+            case R.id.ll_first:
+            case R.id.ll_second:
+            case R.id.ll_third:
+                toActivity(UserCentre01Activity.class);
+                break;
+        }
     }
 }

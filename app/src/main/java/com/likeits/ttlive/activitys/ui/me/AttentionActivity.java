@@ -73,7 +73,7 @@ public class AttentionActivity extends Container implements
         mListView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
-                toActivity(UserCentreActivity.class);
+                toActivity(UserCentre01Activity.class);
             }
         });
     }

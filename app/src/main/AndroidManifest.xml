@@ -18,6 +18,7 @@
     <uses-permission android:name="android.permission.RECORD_AUDIO" />
     <uses-permission android:name="android.permission.CAMERA" />
     <uses-permission android:name="android.permission.READ_LOGS" />
+
     <supports-screens
         android:anyDensity="true"
         android:largeScreens="true"
@@ -84,7 +85,12 @@
         <activity android:name=".activitys.ui.me.WithdrawActivity" />
         <activity android:name=".activitys.ui.me.ExchangeGiftActivity" />
         <activity android:name=".activitys.ui.me.MonthlyStatementActivity" />
-        <activity android:name=".activitys.ui.me.Withdraw01Activity"></activity>
+        <activity android:name=".activitys.ui.me.Withdraw01Activity" />
+        <activity android:name=".activitys.ui.me.UserEditActivity" />
+        <activity android:name=".activitys.ui.me.UserCentre01Activity" />
+        <activity android:name=".activitys.ui.live.UserLiveActivity" />
+        <activity android:name=".activitys.ui.live.RoomDetailsActivity" />
+        <activity android:name=".activitys.ui.live.RoomSettingActivity"></activity>
     </application>
 
 </manifest>

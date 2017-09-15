@@ -4,21 +4,10 @@
     <modules>
       <module fileurl="file://$PROJECT_DIR$/Ttlive.iml" filepath="$PROJECT_DIR$/Ttlive.iml" />
       <module fileurl="file://$PROJECT_DIR$/Ttlive03.iml" filepath="$PROJECT_DIR$/Ttlive03.iml" />
-      <module fileurl="file://$PROJECT_DIR$/Ttlive03.iml" filepath="$PROJECT_DIR$/Ttlive03.iml" />
-      <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" />
-      <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" />
       <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" />
       <module fileurl="file://$PROJECT_DIR$/baseapp_module/baseapp_module.iml" filepath="$PROJECT_DIR$/baseapp_module/baseapp_module.iml" />
-      <module fileurl="file://$PROJECT_DIR$/baseapp_module/baseapp_module.iml" filepath="$PROJECT_DIR$/baseapp_module/baseapp_module.iml" />
-      <module fileurl="file://$PROJECT_DIR$/baseapp_module/baseapp_module.iml" filepath="$PROJECT_DIR$/baseapp_module/baseapp_module.iml" />
-      <module fileurl="file://$PROJECT_DIR$/easeui/easeui.iml" filepath="$PROJECT_DIR$/easeui/easeui.iml" />
-      <module fileurl="file://$PROJECT_DIR$/easeui/easeui.iml" filepath="$PROJECT_DIR$/easeui/easeui.iml" />
       <module fileurl="file://$PROJECT_DIR$/easeui/easeui.iml" filepath="$PROJECT_DIR$/easeui/easeui.iml" />
       <module fileurl="file://$PROJECT_DIR$/kkeventbus_module/kkeventbus_module.iml" filepath="$PROJECT_DIR$/kkeventbus_module/kkeventbus_module.iml" />
-      <module fileurl="file://$PROJECT_DIR$/kkeventbus_module/kkeventbus_module.iml" filepath="$PROJECT_DIR$/kkeventbus_module/kkeventbus_module.iml" />
-      <module fileurl="file://$PROJECT_DIR$/kkeventbus_module/kkeventbus_module.iml" filepath="$PROJECT_DIR$/kkeventbus_module/kkeventbus_module.iml" />
-      <module fileurl="file://$PROJECT_DIR$/pulltorefreshlibrary/pulltorefreshlibrary.iml" filepath="$PROJECT_DIR$/pulltorefreshlibrary/pulltorefreshlibrary.iml" />
-      <module fileurl="file://$PROJECT_DIR$/pulltorefreshlibrary/pulltorefreshlibrary.iml" filepath="$PROJECT_DIR$/pulltorefreshlibrary/pulltorefreshlibrary.iml" />
       <module fileurl="file://$PROJECT_DIR$/pulltorefreshlibrary/pulltorefreshlibrary.iml" filepath="$PROJECT_DIR$/pulltorefreshlibrary/pulltorefreshlibrary.iml" />
     </modules>
   </component>
