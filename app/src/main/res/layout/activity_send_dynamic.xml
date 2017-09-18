@@ -23,7 +23,69 @@
             android:layout_height="match_parent"
             android:orientation="vertical">
 
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="200dip"
+                android:layout_marginTop="10dip"
+                android:background="@color/white"
+                android:orientation="vertical"
+                android:padding="15dip">
 
+                <EditText
+                    android:id="@+id/ed_circle_message"
+                    android:layout_width="match_parent"
+                    android:layout_height="0dip"
+                    android:layout_marginLeft="10dip"
+                    android:layout_weight="1"
+                    android:background="@null"
+                    android:gravity="top"
+                    android:hint="说点什么吧..."
+                    android:textColorHint="@color/defualt_textcolor_f"
+                    android:textSize="14sp" />
+
+                <RelativeLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="right">
+
+                    <TextView
+                        android:id="@+id/tv_circle_length"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="0"
+                        android:textColor="@color/defualt_textcolor_c" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_toRightOf="@+id/tv_circle_length"
+                        android:text="/250"
+                        android:textColor="@color/defualt_textcolor_c" />
+                </RelativeLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="120dip"
+                android:layout_marginTop="10dip"
+                android:background="@color/white"
+                android:orientation="vertical">
+
+                <com.likeits.ttlive.activitys.custom.CustomScrollGridView
+                    android:id="@+id/gv_all_photo"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="10dip"
+                    android:gravity="center"
+                    android:horizontalSpacing="5dp"
+                    android:listSelector='#00000000'
+                    android:numColumns="4"
+                    android:scrollbars="none"
+                    android:verticalSpacing="5dp"></com.likeits.ttlive.activitys.custom.CustomScrollGridView>
+                <View
+                    android:layout_width="1dip"
+                    android:layout_height="match_parent"></View>
+            </LinearLayout>
         </LinearLayout>
     </com.handmark.pulltorefresh.library.PullToRefreshScrollView>
 </LinearLayout>
