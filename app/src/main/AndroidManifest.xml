@@ -67,7 +67,6 @@
         <activity android:name=".activitys.login.ForgetPwdActivity" />
         <activity android:name=".activitys.ui.home.PlayActivity" />
         <activity android:name=".activitys.ui.home.MakeFriendsActivity" />
-        <activity android:name=".activitys.ui.me.RoomActivity" />
         <activity android:name=".activitys.ui.me.PayActivity" />
         <activity android:name=".activitys.ui.me.AttentionActivity" />
         <activity android:name=".activitys.ui.me.GiftActivity" />
@@ -90,7 +89,13 @@
         <activity android:name=".activitys.ui.me.UserCentre01Activity" />
         <activity android:name=".activitys.ui.live.UserLiveActivity" />
         <activity android:name=".activitys.ui.live.RoomDetailsActivity" />
-        <activity android:name=".activitys.ui.live.RoomSettingActivity"></activity>
+        <activity android:name=".activitys.ui.live.RoomSettingActivity" />
+        <activity android:name=".activitys.ui.live.LiveUserListActivity" />
+        <activity android:name=".activitys.ui.chat.NewFriendsActivity" />
+        <activity android:name=".activitys.ui.chat.FriendActivity" />
+        <activity android:name=".activitys.ui.chat.NearFriendActivity" />
+        <activity android:name=".activitys.ui.chat.CircleActivity" />
+        <activity android:name=".activitys.ui.chat.SendDynamicActivity"></activity>
     </application>
 
 </manifest>

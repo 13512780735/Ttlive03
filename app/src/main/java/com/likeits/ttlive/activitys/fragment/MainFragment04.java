@@ -12,6 +12,7 @@ import android.widget.TextView;
 import com.handmark.pulltorefresh.library.PullToRefreshBase;
 import com.handmark.pulltorefresh.library.PullToRefreshScrollView;
 import com.likeits.ttlive.R;
+import com.likeits.ttlive.activitys.ui.live.UserLiveActivity;
 import com.likeits.ttlive.activitys.ui.me.ApplyErederActivity;
 import com.likeits.ttlive.activitys.ui.me.ApplyShortActivity;
 import com.likeits.ttlive.activitys.ui.me.AttentionActivity;
@@ -21,7 +22,6 @@ import com.likeits.ttlive.activitys.ui.me.GiftActivity;
 import com.likeits.ttlive.activitys.ui.me.MemberActivity;
 import com.likeits.ttlive.activitys.ui.me.MountActivity;
 import com.likeits.ttlive.activitys.ui.me.PayActivity;
-import com.likeits.ttlive.activitys.ui.me.RoomActivity;
 import com.likeits.ttlive.activitys.ui.me.SettingActivity;
 import com.likeits.ttlive.activitys.ui.me.TaskActivity;
 import com.likeits.ttlive.activitys.ui.me.UserCentreActivity;
@@ -124,7 +124,7 @@ public class MainFragment04 extends MyBaseFragment implements
                 toActivity(UserCentreActivity.class);
                 break;
             case R.id.me_gridView_rl_room:
-                toActivity(RoomActivity.class);
+                toActivity(UserLiveActivity.class);
                 break;
             case R.id.me_gridView_rl_pay:
                 toActivity(PayActivity.class);

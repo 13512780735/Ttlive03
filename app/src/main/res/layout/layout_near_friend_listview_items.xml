@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="80dip"
+    android:background="@color/white"
+    android:orientation="horizontal">
+
+    <com.likeits.ttlive.activitys.view.CircleImageView
+        android:id="@+id/me_header_avatar"
+        android:layout_width="60dip"
+        android:layout_height="60dip"
+        android:layout_gravity="center"
+        android:layout_marginLeft="10dip"
+        android:src="@mipmap/test04" />
+
+    <RelativeLayout
+        android:layout_width="0dip"
+        android:layout_height="match_parent"
+        android:layout_marginLeft="20dip"
+        android:layout_weight="1">
+
+        <TextView
+            android:id="@+id/me_header_name"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:gravity="center_vertical"
+            android:text="小灰灰"
+            android:textSize="14sp" />
+
+        <ImageView
+            android:id="@+id/me_header_sex"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="20dip"
+            android:layout_toRightOf="@+id/me_header_name"
+            android:src="@mipmap/icon_me_boy" />
+        <TextView
+            android:id="@+id/me_header_distance"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:textColor="@color/defualt_textcolor_c"
+            android:paddingRight="10dip"
+            android:text="568米以内"/>
+    </RelativeLayout>
+</LinearLayout>

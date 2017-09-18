@@ -1,18 +1,16 @@
 package com.likeits.ttlive.activitys.event;
 
 public class MessageEvent {
-
-    private String type;
-
-    public MessageEvent(String type) {
-        this.type = type;
+    private String message;
+    public MessageEvent(String message) {
+        this.message = message;
     }
 
-    public String getType() {
-        return type;
+    public String getMessage() {
+        return message;
     }
 
-    public void setType(String type) {
-        this.type = type;
+    public void setMessage(String message) {
+        this.message = message;
     }
 }

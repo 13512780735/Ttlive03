@@ -122,6 +122,127 @@
                 </RelativeLayout>
             </LinearLayout>
 
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dip"
+                android:background="@color/line_color"></View>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="80dip"
+                android:background="@color/white"
+                android:orientation="horizontal"
+                android:padding="10dip"
+                >
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:padding="15dip"
+                    android:text="房间分类"
+                    android:textColor="@color/defualt_textcolor_c" />
+
+                <LinearLayout
+                    android:layout_width="0dip"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+
+                    android:orientation="vertical">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="0dip"
+                        android:layout_weight="1"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:layout_width="0dip"
+                            android:layout_height="match_parent"
+                            android:layout_margin="2dip"
+                            android:layout_weight="1"
+                            android:background="@drawable/shape_round_grey_btn_"
+                            android:gravity="center"
+                            android:text="相亲"
+                            android:textSize="12sp"
+                            android:textColor="@color/defualt_textcolor_c" />
+
+                        <TextView
+                            android:layout_width="0dip"
+                            android:layout_height="match_parent"
+                            android:layout_margin="2dip"
+                            android:layout_weight="1"
+                            android:background="@drawable/shape_round_grey_btn_"
+                            android:gravity="center"
+                            android:text="男女模"
+                            android:textSize="12sp"
+                            android:textColor="@color/defualt_textcolor_c" />
+
+                        <TextView
+                            android:id="@+id/checkBox"
+                            android:layout_width="0dip"
+                            android:layout_height="match_parent"
+                            android:layout_margin="2dip"
+                            android:layout_weight="1"
+                            android:background="@drawable/shape_round_grey_btn_"
+                            android:gravity="center"
+                            android:text="速配"
+                            android:textSize="12sp"
+                            android:textColor="@color/defualt_textcolor_c" />
+
+                        <TextView
+                            android:layout_width="0dip"
+                            android:layout_height="match_parent"
+                            android:layout_margin="2dip"
+                            android:layout_weight="1"
+                            android:background="@drawable/shape_round_grey_btn_"
+                            android:gravity="center"
+                            android:text="音乐"
+                            android:textSize="12sp"
+                            android:textColor="@color/defualt_textcolor_c" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="0dip"
+                        android:layout_weight="1"
+                        android:layout_marginTop="5dip"
+                        android:orientation="horizontal">
+                        <TextView
+                            android:layout_width="0dip"
+                            android:layout_height="match_parent"
+                            android:layout_margin="2dip"
+                            android:layout_weight="1"
+                            android:textSize="12sp"
+                            android:background="@drawable/shape_round_grey_btn_"
+                            android:gravity="center"
+                            android:text="线上陪玩"
+                            android:textColor="@color/defualt_textcolor_c" />
+
+                        <TextView
+                            android:layout_width="0dip"
+                            android:layout_height="match_parent"
+                            android:layout_margin="2dip"
+                            android:layout_weight="1"
+                            android:textSize="12sp"
+                            android:background="@drawable/shape_round_grey_btn_"
+                            android:gravity="center"
+                            android:text="线下陪玩"
+                            android:textColor="@color/defualt_textcolor_c" />
+
+                        <TextView
+                            android:layout_width="0dip"
+                            android:layout_height="match_parent"
+                            android:layout_margin="2dip"
+                            android:textSize="12sp"
+                            android:layout_weight="1"
+                            android:gravity="center"
+                            android:text=""
+                            android:textColor="@color/defualt_textcolor_c" />
+
+                    </LinearLayout>
+                </LinearLayout>
+            </LinearLayout>
+
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="120dip"
